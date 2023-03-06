@@ -1,0 +1,36 @@
+@import "./var.less";
+
+.page__body {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: @main-text-size-1;
+  line-height: @main-text-line-height-1;
+
+  @media (min-width: @tab-width) {
+    font-size: @main-text-size-2;
+    line-height: @main-text-line-height-2;
+  }
+}
+
+// Липкий футер
+.page__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: @mob-width;
+  background-color: @main-btn-color;
+
+  @media (min-width: @tab-width) {
+    min-width: 708px;
+  }
+
+  @media (min-width: @ds-width) {
+    min-width: 1220px;
+  }
+}
+
+.page-footer {
+  margin-top: auto;
+}
