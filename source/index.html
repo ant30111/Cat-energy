@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font">
-  <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font">
-  <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="font">
-  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="font">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon-32.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body>
+<body class="page__body">
+
+  <div class="page__container">
+
+    <!-- Хедер -->
+    <header class="main-header">
+      <a class="main-header__logo" href="#">
+        <img src="img/logo-mob.svg" alt="Логотип Кэт энерджи" width="191" height="38">
+      </a>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__burger"></span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a>Главная</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">Каталог продукции</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  </div>
 
 </body>
+
 </html>
