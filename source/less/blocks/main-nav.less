@@ -1,0 +1,154 @@
+@import "../global/var.less";
+
+// Общие стили кнопки
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 14px;
+  width: 24px;
+  height: 16px;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+// Кнопка закрытого меню
+.main-nav--closed .main-nav__burger {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background-color: @main-title-color;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 1px;
+    background-color: @main-title-color;
+  }
+
+  &::before {
+    transform: translateY(7px);
+  }
+
+  &::after {
+    transform: translateY(-7px);
+  }
+}
+
+
+// Кнопка открытого меню
+.main-nav--opened .main-nav__burger {
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 1px;
+    background-color: @main-title-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+// No JS
+.main-nav--nojs {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    position: static;
+  }
+}
+
+.main-nav--closed {
+  .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav--opened.main-nav--nojs {
+  .main-nav__list {
+    position: static;
+  }
+}
+
+
+// Меню
+.main-nav__list {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  font-weight: 500;
+  font-size: @font-size-1;
+  line-height: @font-line-height-1;
+  text-transform: uppercase;
+}
+
+.main-nav__item a {
+  position: relative;
+  padding: 22px 0 24px;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+    content: "";
+  }
+}
+
+.main-nav__item:first-child a {
+  &::before {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+    content: "";
+  }
+}
+
+.main-nav__item--current a {
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
