@@ -99,8 +99,10 @@
 // Меню
 .main-nav__list {
   position: absolute;
-  top: 50px;
-  width: 100%;
+  z-index: 2;
+  top: 56px;
+  left: -20px;
+  width: 100vw;
   font-weight: 500;
   font-size: @font-size-1;
   line-height: @font-line-height-1;
@@ -111,13 +113,14 @@
   position: relative;
   padding: 22px 0 24px;
   text-align: center;
+  background-color: @main-btn-color;
 
   &:hover {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   &:active {
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &::after {
