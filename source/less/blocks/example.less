@@ -1,0 +1,31 @@
+@import "../global/var.less";
+
+.example {
+  position: relative;
+  margin: 0 20px;
+
+  &::before {
+    position: absolute;
+    left: -20px;
+    width: 100vw;
+    height: 100%;
+    background-color: #eaeaea;
+    content: "";
+  }
+}
+
+.example__title {
+  position: relative;
+  padding-top: 25px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: @title-size-1;
+  line-height: @title-line-height-3;
+}
+
+.example__discription {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "Lato", "Arial", sans-serif;
+  color: @main-text-color;
+}
