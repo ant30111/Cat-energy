@@ -29,3 +29,49 @@
   font-family: "Lato", "Arial", sans-serif;
   color: @main-text-color;
 }
+
+.example__list {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.example__term-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.example__term-discription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 124px;
+  min-height: 56px;
+  font-size: @title-size-2;
+  line-height: @main-text-line-height-2;
+  outline: 1px solid @decor-2;
+  border-radius: 3px;
+}
+
+.example__term {
+  width: 87px;
+  margin-top: -7px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: @font-size-3;
+  line-height: 12px;
+  text-align: center;
+  color: @main-text-color;
+  background-color: #eaeaea;
+}
+
+.example__total {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: @font-line-height-1;
+  text-align: center;
+  text-transform: uppercase;
+}
