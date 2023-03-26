@@ -75,3 +75,63 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+// Слайдер до-после
+.example__slider {
+  position: relative;
+  width: 100%;
+}
+
+.example__slider-before {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 50%;
+  background-color: #eaeaea;
+}
+
+.example__slider-after .example__img {
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.example__slider-control {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #666666;
+  border-radius: 2px;
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: url("../../img/index/icons/slider-thumb-default.svg") no-repeat;
+    transform: translate(-50%, -50%);
+    content: "";
+  }
+
+  &:hover {
+    background-color: @bg-main-color;
+
+    &::after {
+      background: url("../../img/index/icons/slider-thumb-hover.svg") no-repeat;
+    }
+  }
+
+  &:active {
+    background-color: @bg-main-color-hover;
+    opacity: 0.6;
+
+    &::after {
+      background: url("../../img/index/icons/slider-thumb-active.svg") no-repeat;
+    }
+  }
+}
