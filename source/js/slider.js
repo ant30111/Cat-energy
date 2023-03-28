@@ -2,7 +2,6 @@ const slider = document.querySelector('.example__slider');
 const before = document.querySelector('.example__slider-before');
 const beforeImage = document.querySelector('.example__img');
 const control = document.querySelector('.example__slider-control');
-const body = document.body;
 
 let isActive = false;
 
@@ -11,15 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
   beforeImage.style.width = `${width}px`;
 });
 
+window.onresize = () => {
+  let width = slider.offsetWidth;
+  beforeImage.style.width = `${width}px`;
+};
+
 const beforeAfterSlider = (x) => {
   let shift = Math.max(0, Math.min(x, slider.offsetWidth));
   before.style.width = `${shift}px`;
   control.style.left = `${shift}px`;
-};
-
-window.onresize = () => {
-  let width = slider.offsetWidth;
-  beforeImage.style.width = `${width}px`;
 };
 
 const pauseEvents = (e) => {
@@ -28,19 +27,19 @@ const pauseEvents = (e) => {
   return false;
 };
 
-body.addEventListener('mousedown', () => {
+control.addEventListener('mousedown', () => {
   isActive = true;
 });
 
-body.addEventListener('mouseup', () => {
+control.addEventListener('mouseup', () => {
   isActive = false;
 });
 
-body.addEventListener('mouseleave', () => {
+control.addEventListener('mouseleave', () => {
   isActive = false;
 });
 
-body.addEventListener('mousemove', (e) => {
+control.addEventListener('mousemove', (e) => {
   if (!isActive) {
     return;
   }
@@ -52,19 +51,19 @@ body.addEventListener('mousemove', (e) => {
   pauseEvents(e);
 });
 
-body.addEventListener('touchstart', () => {
+control.addEventListener('touchstart', () => {
   isActive = true;
 });
 
-body.addEventListener('touchend', () => {
+control.addEventListener('touchend', () => {
   isActive = false;
 });
 
-body.addEventListener('touchcancel', () => {
+control.addEventListener('touchcancel', () => {
   isActive = false;
 });
 
-body.addEventListener('touchmove', (e) => {
+control.addEventListener('touchmove', (e) => {
   if (!isActive) {
     return;
   }
