@@ -2,10 +2,22 @@
   position: relative;
   min-width: 280px;
   margin: 10px 20px 18px;
+
+  @media (min-width: @tab-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+  }
 }
 
 .main-header__logo {
   max-width: 191px;
+
+  @media (min-width: @tab-width) {
+    max-width: 174px;
+    margin-right: 94px;
+  }
 
   &:hover {
     opacity: 0.8;

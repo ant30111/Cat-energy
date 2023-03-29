@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
@@ -24,7 +24,10 @@
     <!-- Хедер -->
     <header class="main-header">
       <a class="main-header__logo" href="#">
-        <img src="img/logo-mob.svg" alt="Логотип Кэт энерджи" width="191" height="38">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tab.svg" width="174" height="52">
+          <img src="img/logo-mob.svg" alt="Логотип Кэт энерджи" width="191" height="38">
+        </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
