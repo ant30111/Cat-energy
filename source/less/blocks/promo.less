@@ -6,6 +6,10 @@
   z-index: 1;
   margin: 0 20px 20px;
 
+  @media (min-width: @tab-width) {
+    margin: 0 30px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -14,6 +18,10 @@
     width: 100vw;
     height: 302px;
     content: "";
+
+    @media (min-width: @tab-width) {
+      display: none;
+    }
   }
 
   &::before {
@@ -29,31 +37,67 @@
 
 .promo__title {
   position: relative;
-  max-width: 250px;
   margin: 27px auto 25px;
   font-weight: 400;
   font-size: @title-size-1;
   line-height: @title-line-height-1;
   color: @main-btn-color;
   text-align: center;
+
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
+
+  @media (min-width: @tab-width) {
+    min-width: 416px;
+    margin: 64px 207px 41px 90px;
+    font-size: @title-size-3;
+    line-height: @title-line-height-4;
+    color: @main-title-color;
+    text-align: left;
+  }
 }
 
 .promo__slogan {
   position: relative;
-  max-width: 198px;
   margin: 0 auto 29px;
   line-height: @font-line-height-2;
   color: @main-btn-color;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    max-width: 198px;
+  }
+
+  @media (min-width: @tab-width) {
+    min-width: 283px;
+    margin: 0 0 20px 90px;
+    font-size: @font-size-1;
+    line-height: @font-line-height-1;
+    color: @main-title-color;
+  }
 }
 
 .promo__img {
   position: relative;
   width: 100%;
-  margin-bottom: 3px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3px;
+  }
 }
 
 .promo__link {
   padding: 11px 0;
   .btn;
+
+  @media (min-width: @tab-width) {
+    position: absolute;
+    top: 229px;
+    width: calc(32vw - 2px);
+    margin-left: 90px;
+    padding: 14px 0;
+    font-size: @font-size-1;
+    line-height: @font-line-height-1;
+  }
 }
