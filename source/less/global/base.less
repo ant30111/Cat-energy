@@ -8,3 +8,11 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.line-break {
+  &--tab-ds {
+    @media (max-width: 768px), (min-width: 770px) {
+      display: none;
+    }
+  }
+}

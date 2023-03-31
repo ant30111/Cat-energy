@@ -2,6 +2,22 @@
 
 .work {
   margin: 0 20px 49px;
+
+  @media (min-width: @tab-width) {
+    position: relative;
+    z-index: 2;
+    margin: 0 30px 104px;
+
+    &::after {
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      margin-left: -30px;
+      bottom: -104px;
+      background-color: #e6e6e6;
+      content: "";
+    }
+  }
 }
 
 .work__title {
@@ -9,6 +25,20 @@
   font-weight: 400;
   font-size: @title-size-1;
   line-height: @title-line-height-3;
+
+  @media (min-width: @tab-width) {
+    margin-bottom: 32px;
+    font-size: @title-size-3;
+    line-height: @title-line-height-4;
+  }
+}
+
+.work__list {
+  @media (min-width: @tab-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 134px 172px;
+  }
 }
 
 .work__item {
@@ -17,6 +47,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: @tab-width) {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -25,6 +59,13 @@
     height: 60px;
     background-color: @bg-main-color;
     content: "";
+
+    @media (min-width: @tab-width) {
+      position: static;
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &::after {
@@ -32,6 +73,11 @@
     top: 15px;
     left: 18px;
     content: "";
+
+    @media (min-width: @tab-width) {
+      top: 30px;
+      left: 28px;
+    }
   }
 
   &--leaf {
@@ -71,4 +117,44 @@
   margin-left: 80px;
   font-family: "Lato", "Arial", sans-serif;
   color: @main-text-color;
+
+  @media (min-width: @tab-width) {
+    margin: 31px 0 0;
+    font-size: @main-text-size-2;
+    line-height: @main-text-line-height-2;
+  }
+}
+
+.work__number {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: @tab-width) {
+    position: absolute;
+    z-index: -1;
+    font-size: 280px;
+    line-height: 280px;
+    color: @bg-text-color;
+
+    &--leaf {
+      top: -32px;
+      right: 43px;
+    }
+
+    &--wash {
+      top: -37px;
+      right: 24px;
+    }
+
+    &--eat {
+      top: -37px;
+      right: 22px;
+    }
+
+    &--alarm {
+      top: -37px;
+      right: 22px;
+    }
+  }
 }
