@@ -1,3 +1,5 @@
+@import "var.less";
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -10,8 +12,14 @@
 }
 
 .line-break {
-  &--tab-ds {
-    @media (max-width: 768px), (min-width: 770px) {
+  &--mob {
+    @media (min-width: @tab-width) {
+      display: none;
+    }
+  }
+
+  &--tab {
+    @media (max-width: 768px), (min-width: @ds-width) {
       display: none;
     }
   }
