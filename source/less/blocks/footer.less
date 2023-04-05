@@ -6,6 +6,12 @@
   justify-content: space-between;
   margin: 0 20px;
   padding: 26px 0;
+
+  @media (min-width: @tab-width) {
+    gap: 10px 296px;
+    margin: 0 30px;
+    padding: 60px 40px;
+  }
 }
 
 .footer__contacts-title {
@@ -14,6 +20,11 @@
   line-height: @font-line-height-1;
   text-transform: uppercase;
   color: #111111;
+
+  @media (min-width: @tab-width) {
+    font-size: @font-size-1;
+    line-height: @font-line-height-4;
+  }
 }
 
 .footer__contacts-address {
@@ -21,19 +32,60 @@
   font-style: normal;
   line-height: @font-line-height-1;
   color: @main-text-color;
+
+  @media (min-width: @tab-width) {
+    min-width: 160px;
+    font-size: @main-text-size-2;
+    text-align: right;
+  }
+}
+
+.footer__address-space {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .footer__map {
   width: 100vw;
+
+  @media (min-width: @tab-width) {
+    display: block;
+    height: 400px;
+  }
 }
 
 .footer__social {
-  background-color: @bg-text-color;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    margin-left: -30px;
+    width: 100vw;
+    height: 100%;
+    background-color: @bg-text-color;
+    content: "";
+  }
+
+  @media (min-width: @tab-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+    padding: 60px 0;
+  }
 }
 
 .footer__site-logo-wrapper {
   margin: 0 20px;
   padding: 40px 77px 20px;
+
+  @media (min-width: @tab-width) {
+    margin: 0 28px 0 0;
+    padding: 0;
+  }
 }
 
 .footer__site-logo {
@@ -63,6 +115,12 @@
   padding: 20px 77px;
   border-top: 1px solid @decor-1;
   border-bottom: 1px solid @decor-1;
+
+  @media (min-width: @tab-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .footer__social-link svg {
@@ -81,6 +139,11 @@
 .footer__main-logo-wrapper {
   margin: 0 20px;
   padding: 20px 0 40px;
+
+  @media (min-width: @tab-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .footer__main-logo {
@@ -106,4 +169,8 @@
   font-size: @main-text-size-2;
   line-height: 19px;
   color: @main-text-color;
+
+  @media (min-width: @tab-width) {
+    margin-right: 27px;
+  }
 }
