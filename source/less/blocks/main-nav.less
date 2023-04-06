@@ -133,6 +133,10 @@
     gap: 15px;
     min-width: 440px;
   }
+
+  @media (min-width: @ds-width) {
+    gap: 15px 32px;
+  }
 }
 
 .main-nav__item a {
@@ -168,6 +172,13 @@
     font-weight: 400;
     font-size: @font-size-2;
     line-height: @main-text-line-height-2;
+  }
+
+  @media (min-width: @ds-width) {
+    font-size: @font-size-1;
+    line-height: @font-line-height-3;
+    color: @main-btn-color;
+    background-color: transparent;
   }
 }
 
@@ -208,6 +219,12 @@
       height: 2px;
       background-color: @bg-main-color;
       content: "";
+    }
+  }
+
+  @media (min-width: @ds-width) {
+    &::after {
+      background-color: @main-btn-color;
     }
   }
 }
