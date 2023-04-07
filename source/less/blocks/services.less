@@ -6,6 +6,18 @@
   @media (min-width: @tab-width) {
     margin: 0 30px 45px;
   }
+
+  @media (min-width: @ds-width) {
+    margin: 0 110px 71px;
+  }
+}
+
+.services__list {
+  @media (min-width: @ds-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 80px;
+  }
 }
 
 .services__item {
@@ -15,6 +27,10 @@
     @media (min-width: @tab-width) {
       margin-bottom: 30px;
     }
+
+    @media (min-width: @ds-width) {
+      margin-bottom: 0;
+    }
   }
 
   padding: 30px 33px 22px 20px;
@@ -22,6 +38,10 @@
 
   @media (min-width: @tab-width) {
     padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: @ds-width) {
+    padding-right: 65px;
   }
 }
 
@@ -37,6 +57,12 @@
     margin: 0 0 24px;
     font-size: @title-size-1;
     line-height: @title-line-height-1;
+  }
+
+  @media (min-width: @ds-width) {
+    width: 50%;
+    margin: 0 auto 73px;
+    text-align: center;
   }
 
   &::before {
@@ -58,9 +84,20 @@
       width: 200px;
       height: 200px;
     }
+
+    @media (min-width: @ds-width) {
+      left: -110px;
+      top: -27px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &--cat-sitting {
+    @media (width: @ds-width) {
+      margin-left: 123px;
+    }
+
     &::after {
       position: absolute;
       width: 36px;
@@ -79,10 +116,28 @@
         height: 194px;
         background: url("../../img/index/icons/services-sitting-cat-tab.svg") no-repeat;
       }
+
+      @media (min-width: @ds-width) {
+        left: -95px;
+        top: -32px;
+        width: 70px;
+        height: 97px;
+        background: url("../../img/index/icons/services-sitting-cat-ds.svg") no-repeat;
+      }
     }
   }
 
   &--cat-walk {
+    @media (width: @ds-width) {
+      margin-left: 147px;
+    }
+
+    &::before {
+      @media (min-width: @ds-width) {
+        left: -143px;
+      }
+    }
+
     &::after {
       position: absolute;
       width: 67px;
@@ -102,6 +157,14 @@
         height: 113px;
         background: url("../../img/index/icons/services-walk-cat-tab.svg") no-repeat;
       }
+
+      @media (min-width: @ds-width) {
+        left: -164px;
+        top: -11px;
+        width: 134px;
+        height: 57px;
+        background: url("../../img/index/icons/services-walk-cat-ds.svg") no-repeat;
+      }
     }
   }
 }
@@ -118,6 +181,10 @@
     font-size: @main-text-size-2;
     line-height: @main-text-line-height-2;
     color: @main-title-color;
+  }
+
+  @media (min-width: @ds-width) {
+    margin-bottom: 27px;
   }
 }
 
