@@ -1,5 +1,11 @@
 @import "../global/var.less";
 
+.footer {
+  @media (min-width: @ds-width) {
+    position: relative;
+  }
+}
+
 .footer__contacts {
   display: flex;
   gap: 10px;
@@ -11,6 +17,17 @@
     gap: 10px 296px;
     margin: 0 30px;
     padding: 60px 40px;
+  }
+
+  @media (min-width: @ds-width) {
+    position: absolute;
+    left: 110px;
+    top: 95px;
+    gap: 10px 87px;
+    width: calc(39% + 4px);
+    margin: 0;
+    padding: 60px 60px 56px 80px;
+    background-color: @main-btn-color;
   }
 }
 
@@ -37,6 +54,10 @@
     min-width: 160px;
     font-size: @main-text-size-2;
     text-align: right;
+  }
+
+  @media (min-width: @ds-width) {
+    text-align: left;
   }
 }
 
@@ -75,6 +96,11 @@
     align-items: center;
     margin: 0 30px;
     padding: 60px 0;
+  }
+
+  @media (min-width: @ds-width) {
+    margin: 0 110px;
+    padding: 67px 0;
   }
 }
 
