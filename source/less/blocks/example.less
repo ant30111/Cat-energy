@@ -85,9 +85,9 @@
   @media (min-width: @tab-width) {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     column-gap: 20px;
-    margin-bottom: 104px;
+    margin-bottom: 98px;
   }
 
   @media (min-width: @ds-width) {
@@ -135,8 +135,8 @@
   border-radius: 3px;
 
   @media (min-width: @tab-width) {
-    width: 157px;
-    min-height: 67px;
+    width: 161px;
+    min-height: 69px;
     font-size: 30px;
     line-height: @title-line-height-2;
   }
@@ -157,6 +157,10 @@
     font-size: @main-text-size-1;
     line-height: @font-line-height-2;
     background-color: @main-btn-color;
+
+    &--weight {
+      width: 112px;
+    }
   }
 
   @media (min-width: @ds-width) {
@@ -172,8 +176,10 @@
   text-transform: uppercase;
 
   @media (min-width: @tab-width) {
-    margin-bottom: 0;
+    margin: 0 4px 7px 0;
     font-size: @font-size-1;
+    line-height: 29px;
+    text-align: right;
   }
 }
 
@@ -199,7 +205,7 @@
   background-color: #eaeaea;
 
   @media (min-width: @tab-width) {
-    background: linear-gradient(to bottom, @main-btn-color 173px, #eaeaea 173px);
+    background: linear-gradient(to bottom, @main-btn-color 151px, #eaeaea 151px);
   }
 
   @media (min-width: @ds-width) {
@@ -212,7 +218,7 @@
   background-color: #eaeaea;
 
   @media (min-width: @tab-width) {
-    background: linear-gradient(to bottom, @main-btn-color 173px, #eaeaea 173px);
+    background: linear-gradient(to bottom, @main-btn-color 151px, #eaeaea 151px);
   }
 
   @media (min-width: @ds-width) {

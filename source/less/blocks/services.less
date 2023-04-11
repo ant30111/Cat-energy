@@ -79,8 +79,8 @@
     }
 
     @media (min-width: @tab-width) {
-      top: 19px;
-      right: -248px;
+      top: 15px;
+      right: -253px;
       width: 200px;
       height: 200px;
     }
@@ -111,7 +111,8 @@
       }
 
       @media (min-width: @tab-width) {
-        right: -208px;
+        right: -223px;
+        top: 4px;
         width: 140px;
         height: 194px;
         background: url("../../img/index/icons/services-sitting-cat-tab.svg") no-repeat;
@@ -151,8 +152,8 @@
       }
 
       @media (min-width: @tab-width) {
-        top: 61px;
-        right: -281px;
+        top: 58px;
+        right: -288px;
         width: 269px;
         height: 113px;
         background: url("../../img/index/icons/services-walk-cat-tab.svg") no-repeat;
@@ -212,14 +213,23 @@
     max-width: 161px;
     font-size: @font-size-1;
     line-height: @font-line-height-3;
+    background-position: 95%;
   }
 
   &:hover {
     background: url("../../img/index/icons/services-arrow-long.svg") no-repeat 92% center;
+
+    @media (min-width: @tab-width) {
+      background-position: 95%;
+    }
   }
 
   &:active {
     background: url("../../img/index/icons/services-arrow-long.svg") no-repeat 92% center;
     opacity: 0.3;
+
+    @media (min-width: @tab-width) {
+      background-position: 95%;
+    }
   }
 }
