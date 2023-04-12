@@ -11,6 +11,7 @@
 
   @media (min-width: @ds-width) {
     display: flex;
+    min-height: 598px;
     margin: 0 110px;
   }
 
@@ -30,7 +31,7 @@
 
     @media (min-width: @ds-width) {
       left: -110px;
-      top: 154px;
+      top: 136px;
       background-color: @bg-text-color;
     }
   }
@@ -92,7 +93,9 @@
 
   @media (min-width: @ds-width) {
     flex-direction: column;
-    row-gap: 47px;
+    align-items: baseline;
+    row-gap: 51px;
+    margin-bottom: 0;
   }
 }
 
@@ -205,11 +208,11 @@
   background-color: #eaeaea;
 
   @media (min-width: @tab-width) {
-    background: linear-gradient(to bottom, @main-btn-color 151px, #eaeaea 151px);
+    background: linear-gradient(to bottom, @main-btn-color 175px, #eaeaea 175px);
   }
 
   @media (min-width: @ds-width) {
-    background: linear-gradient(to bottom, @main-btn-color 154px, @bg-text-color 154px);
+    background: linear-gradient(to bottom, @main-btn-color 136px, @bg-text-color 136px);
   }
 }
 
@@ -218,11 +221,11 @@
   background-color: #eaeaea;
 
   @media (min-width: @tab-width) {
-    background: linear-gradient(to bottom, @main-btn-color 151px, #eaeaea 151px);
+    background: linear-gradient(to bottom, @main-btn-color 175px, #eaeaea 175px);
   }
 
   @media (min-width: @ds-width) {
-    background: linear-gradient(to bottom, @main-btn-color 154px, @bg-text-color 154px);
+    background: linear-gradient(to bottom, @main-btn-color 136px, @bg-text-color 136px);
   }
 }
 
@@ -235,6 +238,10 @@
   height: 100%;
   background-color: #666666;
   border-radius: 2px;
+
+  @media (min-width: @ds-width) {
+    height: 86%;
+  }
 
   &::after {
     position: absolute;
