@@ -23,7 +23,7 @@
 
     <!-- Хедер -->
     <header class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-ds.svg" width="202" height="59">
           <source media="(min-width: 769px)" srcset="img/logo-tab.svg" width="174" height="52">
@@ -37,14 +37,14 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a>Главная</a>
+            <li class="main-nav__item">
+              <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a href="#">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="main-nav__item main-nav__item--current">
+              <a>Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -53,131 +53,107 @@
 
     <main>
 
+      <!-- Форма -->
+      <section class="program-selection">
+        <h1 class="program-selection-title">Подбор программы</h1>
+        <p class="program-selection-discription">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
 
-      <!-- Промо -->
-      <section class="promo">
-        <h1 class="promo__title">Функциональное
-          питание для котов</h1>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <picture>
-          <!-- <source type="image/webp"
-            srcset="img/index/index-can-ds.webp 1x, img/index/webp/index-can-ds@2x.webp 2x"> -->
-          <!-- <source type="image/webp"
-            srcset="img/index/index-can-tab.webp 1x, img/index/webp/index-can-tab@2x.webp 2x"> -->
-          <!-- <source type="image/webp"
-            srcset="img/index/index-can-mob.webp 1x, img/index/webp/index-can-mob@2x.webp 2x"> -->
-          <source media="(min-width: 1440px)" srcset="img/index/index-can-ds.png 1x, img/index/index-can-ds@2x.png 2x"
-            width="552" height="499">
-          <source media="(min-width: 769px)" srcset="img/index/index-can-tab.png 1x, img/index/index-can-tab@2x.png 2x"
-            width="709" height="609">
-          <img class="promo__img" src="img/index/index-can-mob.png" srcset="img/index/index-can-mob@2x.png 2x"
-            width="280" height="270" alt="Пример питания для котов">
-        </picture>
-        <a class="promo__link" href="form.html">Подобрать программу</a>
-      </section>
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
 
+          <!-- Основные данные -->
+          <fieldset class="form__group">
+            <label class="form__label" for="form-name">ИМЯ:*</label>
+            <input class="form__input" type="text" id="form-name" placeholder="барсик">
+            <label class="form__label" for="form-weight">Вес (кг):*</label>
+            <input class="form__input" type="number" id="form-weight" placeholder="7">
+            <label class="form__label" for="form-age">Возраст (лет):</label>
+            <input class="form__input" type="number" id="form-age" placeholder="7">
+          </fieldset>
 
-      <!-- Услуги -->
-      <section class="services">
-        <h2 class="visually-hidden">Список услуг</h2>
-        <ul class="services__list">
-          <li class="services__item">
-            <h3 class="services__title services__title--cat-sitting">Похудение</h3>
-            <p class="services__discription">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <span class="services__devider"></span>
-            <a class="services__link" href="#">Каталог SLIM</a>
-          </li>
-          <li class="services__item">
-            <h3 class="services__title services__title--cat-walk">Набор массы</h3>
-            <p class="services__discription">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
-              Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <span class="services__devider"></span>
-            <a class="services__link" href="#">Каталог PRO</a>
-          </li>
-        </ul>
-      </section>
+          <!-- Цель программы -->
+          <fieldset class="form__group">
+            <ul class="form__radio-list">
+              <li class="form__radio-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="radio" name="target" value="weight-loss"
+                    checked>
+                  <span class="form__control-mark form__control-mark-radio"></span>
+                  <span class="form__control-label">похудение</span>
+                </label>
+              </li>
+              <li class="form__radio-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="radio" name="target" value="weight-gain">
+                  <span class="form__control-mark form__control-mark-radio"></span>
+                  <span class="form__control-label">Набор массы</span>
+                </label>
+              </li>
+              <li class="form__radio-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="radio" name="target" value="no-answer">
+                  <span class="form__control-mark form__control-mark-radio"></span>
+                  <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
+          <!-- Владелец кота -->
+          <fieldset class="form__group">
+            <legend class="form__legend">Контактные данные
+              (владельца кота)</legend>
+            <label class="form__label" for="form-email">E-mail:*</label>
+            <input class="form__input" type="email" id="form-email" placeholder="kuklachev@gmail.com">
+            <label class="form__label" for="form-tel">Вес (кг):*</label>
+            <input class="form__input" type="tel" id="form-tel" placeholder="8 (960) 900-60-90">
+          </fieldset>
 
-      <!-- Как это работает -->
-      <section class="work">
-        <h2 class="work__title">Как это работает</h2>
-        <ul class="work__list">
-          <li class="work__item work__item--leaf">
-            <p class="work__discription">Функциональное питание
-              содержит только полезные
-              питательные вещества.</p>
-            <span class="work__number work__number--leaf">1</span>
-          </li>
-          <li class="work__item work__item--wash">
-            <p class="work__discription">Выпускается в виде порошка,
-              который нужно лишь залить
-              кипятком и готово.</p>
-            <span class="work__number work__number--wash">2</span>
-          </li>
-          <li class="work__item work__item--eat">
-            <p class="work__discription">Замените один-два приема
-              обычной еды на наше
-              функциональное питание.</p>
-            <span class="work__number work__number--eat">3</span>
-          </li>
-          <li class="work__item work__item--alarm">
-            <p class="work__discription">Уже через месяц наслаждайтесь изменениями к лучшему<br class="line-break--tab-ds"> вашего питомца!</p>
-            <span class="work__number work__number--alarm">4</span>
-          </li>
-        </ul>
-      </section>
+          <!-- Комментарий -->
+          <fieldset class="form__group">
+            <legend class="form__legend">Комментарий</legend>
+            <label class="visually-hidden">Текстовое поле ввода</label>
+            <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
 
+          <!-- Дополнительно -->
+          <fieldset class="form__group">
+            <legend class="form__legend">Дополнительно</legend>
+            <ul class="form__checkbox-list">
+              <li class="form__checkbox-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="sweetener" checked>
+                  <span class="form__control-mark form__control-mark-checkbox"></span>
+                  <span class="form__control-label">сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="form__checkbox-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="drinking-water">
+                  <span class="form__control-mark form__control-mark-checkbox"></span>
+                  <span class="form__control-label">питьевая вода</span>
+                </label>
+              </li>
+              <li class="form__checkbox-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="milk">
+                  <span class="form__control-mark form__control-mark-checkbox"></span>
+                  <span class="form__control-label">молоко</span>
+                </label>
+              </li>
+              <li class="form__checkbox-item">
+                <label class="form__control">
+                  <input class="visually-hidden form__control-input" type="checkbox" name="vitamins">
+                  <span class="form__control-mark form__control-mark-checkbox"></span>
+                  <span class="form__control-label">витамины</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-      <!-- Пример -->
-      <section class="example">
-        <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__discription">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-            Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="example__list-wrapper">
-            <dl class="example__list">
-              <div class="example__term-wrapper">
-                <dt class="example__term example__term--weight">cнижение<br class="line-break--mob"> веса</dt>
-                <dd class="example__term-discription">5 КГ</dd>
-              </div>
-              <div class="example__term-wrapper">
-                <dt class="example__term">затрачено времени</dt>
-                <dd class="example__term-discription">60 ДНЕЙ</dd>
-              </div>
-            </dl>
-            <div class="example__total"><span class="example__total-space">Затраты на питание:</span><br
-                class="line-break--tab"> 15 000 РУБ.</div>
-          </div>
-        </div>
-
-        <!-- Слайдер до-после -->
-        <div class="example__slider">
-          <div class="example__slider-before">
-            <picture>
-              <!-- <source type="image/webp" srcset="img/index/cat-before-tab.webp 1x, img/index/cat-before-tab@2x.webp 2x"> -->
-              <!-- <source type="image/webp" srcset="img/index/cat-before-mob.webp 1x, img/index/cat-before-mob@2x.webp 2x"> -->
-              <source media="(min-width: 769px)"
-                srcset="img/index/cat-before-tab.png 1x, img/index/cat-before-tab@2x.png 2x" width="560" height="512">
-              <img class="example__img" src="img/index/cat-before-mob.png" srcset="img/index/cat-before-mob@2x.png 2x"
-                width="280" height="256" alt="Кот до">
-            </picture>
-          </div>
-          <div class="example__slider-after">
-            <picture>
-              <!-- <source type="image/webp" srcset="img/index/cat-after-tab.webp 1x, img/index/cat-after-tab@2x.webp 2x"> -->
-              <!-- <source type="image/webp" srcset="img/index/cat-after-mob.webp 1x, img/index/cat-after-mob@2x.webp 2x"> -->
-              <source media="(min-width: 769px)"
-                srcset="img/index/cat-after-tab.png 1x, img/index/cat-after-tab@2x.png 2x" width="560" height="512">
-              <img class="example__img" src="img/index/cat-after-mob.png" srcset="img/index/cat-after-mob@2x.png 2x"
-                width="280" height="256" alt="Кот после">
-            </picture>
-          </div>
-          <div class="example__slider-control">
-            <span class="visually-hidden">Маркер управелния слайдером</span>
-          </div>
-        </div>
+          <button class="form__btn" type="submit">отправить заявку</button>
+          <span class="form__note">* — Обязательные поля</span>
+        </form>
       </section>
 
     </main>
@@ -281,7 +257,6 @@
   </div>
 
   <script src="js/burger.js"></script>
-  <script src="js/slider.js"></script>
 </body>
 
 </html>
