@@ -14,3 +14,21 @@
     color: rgba(256, 256, 256, 0.3);
   }
 }
+
+.input() {
+  outline: 1px solid @decor-4;
+  text-transform: uppercase;
+  color: @main-text-color;
+
+  &:hover {
+    outline: 1px solid @decor-2;
+  }
+
+  &:focus {
+    outline: 2px solid @main-text-color;
+  }
+
+  &:invalid {
+    outline: 2px solid #ff8282;
+  }
+}

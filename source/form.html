@@ -55,8 +55,8 @@
 
       <!-- Форма -->
       <section class="program-selection">
-        <h1 class="program-selection-title">Подбор программы</h1>
-        <p class="program-selection-discription">Заполните анкету, и мы подберем
+        <h1 class="program-selection__title">Подбор программы</h1>
+        <p class="program-selection__discription">Заполните анкету, и мы подберем<br>
           программу питания для вашего кота</p>
 
         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
@@ -105,8 +105,14 @@
               (владельца кота)</legend>
             <label class="form__label" for="form-email">E-mail:*</label>
             <input class="form__input" type="email" id="form-email" placeholder="kuklachev@gmail.com">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <label class="form__label" for="form-tel">Вес (кг):*</label>
             <input class="form__input" type="tel" id="form-tel" placeholder="8 (960) 900-60-90">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </fieldset>
 
           <!-- Комментарий -->
@@ -164,7 +170,7 @@
 
       <!-- Контакты -->
       <section class="footer__contacts">
-        <h2 class="footer__contacts-title">Приглашаем<br>
+        <h2 class="footer__contacts-title">Приглашаем<br class="line-break--tab-ds">
 к сотрудничеству
 дилеров!</h2>
         <address class="footer__contacts-address">ул. Большая

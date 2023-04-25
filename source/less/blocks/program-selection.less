@@ -1,0 +1,28 @@
+@import "../global/var.less";
+
+.program-selection {
+  position: relative;
+  margin: 0 20px;
+
+  &::before {
+    position: absolute;
+    top: -27px;
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: @decor-1;
+    content: "";
+  }
+}
+
+.program-selection__title {
+  margin-top: 27px;
+  font-weight: 400;
+  font-size: @title-size-1;
+  line-height: @title-line-height-1;
+}
+
+.program-selection__discription {
+  margin-top: 37px;
+  text-transform: uppercase;
+}
