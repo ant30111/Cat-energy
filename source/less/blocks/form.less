@@ -5,3 +5,29 @@
   margin-top: 39px;
   padding-bottom: 32px;
 }
+
+.form__input-wrapper {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 24px;
+  }
+}
+
+.form__label {
+  margin-right: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: @main-text-color;
+}
+
+.form__input {
+  .input();
+  width: 100%;
+  padding: 14px 20px 13px;
+}

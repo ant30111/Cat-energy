@@ -31,4 +31,13 @@
   &:invalid {
     outline: 2px solid #ff8282;
   }
+
+  &:disabled {
+    background-color: @decor-2;
+    cursor: default;
+  }
+
+  &::placeholder {
+    color: @main-text-color;
+  }
 }
