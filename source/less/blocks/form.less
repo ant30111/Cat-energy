@@ -31,3 +31,85 @@
   width: 100%;
   padding: 14px 20px 13px;
 }
+
+.form__group-radio {
+  position: relative;
+  padding: 22px 0 19px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    left: -20px;
+    background-color: @decor-1;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.form__radio-item {
+  min-height: 30px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 13px;
+  }
+}
+
+.form__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 45px;
+  cursor: pointer;
+}
+
+.form__control-input:hover + .form__control-mark-radio {
+  border: 1px solid #bababa;
+}
+
+.form__control-input:disabled ~ span {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.form__control-input:focus ~ span {
+  outline: 1px solid @main-title-color;
+}
+
+.form__control-mark {
+  position: absolute;
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @decor-2;
+  cursor: pointer;
+}
+
+.form__control-mark-radio {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .form__control-mark-radio::before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 13px;
+  height: 13px;
+  background-color: @bg-main-color;
+  border-radius: 50%;
+  content: "";
+}
+
+.form__control-label {
+  font-size: @main-text-size-2;
+  text-transform: uppercase;
+  color: #222222;
+}
