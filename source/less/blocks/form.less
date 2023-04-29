@@ -32,6 +32,8 @@
   padding: 14px 20px 13px;
 }
 
+// Цель программы
+
 .form__group-radio {
   position: relative;
   padding: 22px 0 19px;
@@ -112,4 +114,53 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   font-size: @main-text-size-2;
   text-transform: uppercase;
   color: #222222;
+}
+
+// Владелец кота
+
+.form__legend-wrapper {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    width: calc(100vw - 20px);
+    height: 2px;
+    background-color: @bg-main-color;
+    content: "";
+  }
+}
+
+.form__legend {
+  font-size: @title-size-2;
+  line-height: @font-line-height-4;
+  background-color: @main-btn-color;
+}
+
+.form__legend-owner {
+  max-width: 201px;
+  padding-top: 26px;
+  margin-bottom: 35px;
+}
+
+.form__input-owner {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 50px;
+}
+
+.form__input-owner:focus + .form__input-icon {
+  stroke: @bg-main-color;
+}
+
+.form__input-owner:invalid + .form__input-icon {
+  stroke: #ff8282;
+}
+
+.form__input-icon {
+  position: absolute;
+  right: 16px;
+  stroke: @main-title-color;
 }
