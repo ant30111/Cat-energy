@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 
-.form__control-input:hover + .form__control-mark-radio {
+.form__control-input:hover + .form__control-mark {
   border: 1px solid #bababa;
 }
 
@@ -141,8 +141,7 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 
 .form__legend-owner {
   max-width: 201px;
-  padding-top: 26px;
-  margin-bottom: 35px;
+  margin: 26px 0 35px;
 }
 
 .form__input-owner {
@@ -163,4 +162,60 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   position: absolute;
   right: 16px;
   stroke: @main-title-color;
+}
+
+// Комментарий
+
+.form__legend-comment {
+  max-width: 132px;
+  margin-bottom: 38px;
+}
+
+.form__input-comment {
+  height: 150px;
+  padding: 15px 9px 12px 9px;
+  font: inherit;
+  font-size: @main-text-size-2;
+}
+
+// Дополнительно
+.form__legend-add {
+  max-width: 167px;
+  margin: 23px 0 34px;
+}
+
+.form__checkbox-item {
+  min-height: 30px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 13px;
+  }
+}
+
+input[type="checkbox"]:checked + .form__control-mark-checkbox::before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 18px;
+  height: 14px;
+  background: url("../../img/form/icon/form-tick.svg") no-repeat;
+  content: "";
+}
+
+// Кнопка
+.form__btn {
+  .btn();
+  width: 100%;
+  margin-top: 34px;
+  padding: 7px 44px;
+  font-size: @main-text-size-2;
+  line-height: @font-line-height-1;
+}
+
+.form__note {
+  margin-top: 21px;
+  font-family: "Lato", "Arial", sans-serif;
+  line-height: 16px;
+  text-align: center;
+  color: @main-title-color;
 }

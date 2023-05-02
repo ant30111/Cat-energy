@@ -132,14 +132,18 @@
 
           <!-- Комментарий -->
           <fieldset class="form__group">
-            <legend class="form__legend">Комментарий</legend>
+            <div class="form__legend-wrapper">
+              <legend class="form__legend form__legend-comment">Комментарий</legend>
+            </div>
             <label class="visually-hidden">Текстовое поле ввода</label>
-            <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__input form__input-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <!-- Дополнительно -->
           <fieldset class="form__group">
-            <legend class="form__legend">Дополнительно</legend>
+            <div class="form__legend-wrapper">
+              <legend class="form__legend form__legend-add">Дополнительно</legend>
+            </div>
             <ul class="form__checkbox-list">
               <li class="form__checkbox-item">
                 <label class="form__control">
@@ -173,7 +177,7 @@
           </fieldset>
 
           <button class="form__btn" type="submit">отправить заявку</button>
-          <span class="form__note">* — Обязательные поля</span>
+          <div class="form__note">* — Обязательные поля</div>
         </form>
       </section>
 
@@ -184,7 +188,7 @@
     <footer class="footer">
 
       <!-- Контакты -->
-      <section class="footer__contacts">
+      <section class="footer__contacts footer__contacts--form">
         <h2 class="footer__contacts-title">Приглашаем<br class="line-break--tab-ds">
 к сотрудничеству
 дилеров!</h2>
@@ -196,9 +200,8 @@
       </section>
 
       <!-- Карта -->
-      <section>
+      <section class="footer__map-wrapper">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-
         <iframe class="footer__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043705196!2d30.320889251809522!3d59.9387941817873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1679941212500!5m2!1sru!2sru"
           width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
