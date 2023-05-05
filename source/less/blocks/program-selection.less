@@ -4,14 +4,20 @@
   position: relative;
   margin: 0 20px;
 
+  @media (min-width: @tab-width) {
+    margin: 0 67px;
+  }
+
   &::before {
-    position: absolute;
-    top: -27px;
-    left: -20px;
-    width: 100vw;
-    height: 1px;
-    background-color: @decor-1;
-    content: "";
+    @media (max-width: 768px) {
+      position: absolute;
+      top: -27px;
+      left: -20px;
+      width: 100vw;
+      height: 1px;
+      background-color: @decor-1;
+      content: "";
+    }
   }
 }
 
@@ -20,9 +26,20 @@
   font-weight: 400;
   font-size: @title-size-1;
   line-height: @title-line-height-1;
+
+  @media (min-width: @tab-width) {
+    margin-top: 64px;
+    font-size: @title-size-3;
+    line-height: @title-line-height-4;
+  }
 }
 
 .program-selection__discription {
   margin-top: 37px;
   text-transform: uppercase;
+
+  @media (min-width: @tab-width) {
+    font-size: @font-size-1;
+    line-height: @font-line-height-3;
+  }
 }
