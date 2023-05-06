@@ -35,8 +35,13 @@
     opacity: 0.6;
   }
 
+  &:focus {
+    outline: 1px solid @main-title-color;
+    outline-offset: 2px;
+  }
+
   &--form {
-    @media (min-width: @tab-width) {
+    @media (min-width: @tab-width) and (max-width: 1439px) {
       margin-right: 100px;
     }
   }

@@ -30,21 +30,23 @@
   }
 
   &--form {
-    position: relative;
-    z-index: 1;
+    @media (max-width: 1439px) {
+      position: relative;
+      z-index: 1;
 
-    &::after {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      width: 100vw;
-      height: 100%;
-      margin-left: -20px;
-      background-color: @bg-text-color;
-      content: "";
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        margin-left: -20px;
+        background-color: @bg-text-color;
+        content: "";
 
-      @media (min-width: @tab-width) {
-        margin-left: -70px;
+        @media (min-width: @tab-width) {
+          margin-left: -70px;
+        }
       }
     }
   }

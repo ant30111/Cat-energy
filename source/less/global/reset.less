@@ -39,6 +39,12 @@ input {
   font: inherit;
   border: none;
   outline: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+  appearance: textfield;
 }
 
 h1,

@@ -9,6 +9,13 @@
     margin-top: 66px;
     padding-bottom: 72px;
   }
+
+  @media (min-width: @ds-width) {
+    display: grid;
+    grid-template-columns: calc(47% - 3px) calc(47% - 3px);
+    column-gap: 80px;
+    padding-bottom: 82px;
+  }
 }
 
 .form__input-wrapper {
@@ -17,6 +24,10 @@
 
   &:not(:last-of-type) {
     margin-bottom: 14px;
+
+    @media (min-width: @ds-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &:last-of-type {
@@ -60,6 +71,10 @@
     margin: 72px auto 0;
     padding: 25px 28px;
     border: 1px solid @decor-4;
+  }
+
+  @media (min-width: @ds-width) {
+    margin: 0;
   }
 
   &::before,
@@ -170,6 +185,10 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 
 // Владелец кота
 
+.form__group-owner {
+  grid-column: 1 / -1;
+}
+
 .form__legend-wrapper {
   position: relative;
   z-index: 1;
@@ -188,10 +207,15 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
       left: -69px;
       background: linear-gradient(to right, @bg-main-color 4%, @main-btn-color 4%, @main-btn-color 9%, @bg-main-color 9%);
     }
+
+    @media (min-width: @ds-width) {
+      left: -110px;
+    }
   }
 }
 
 .form__legend {
+  font-weight: 400;
   font-size: @title-size-2;
   line-height: @font-line-height-4;
   background-color: @main-btn-color;
@@ -212,8 +236,19 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   }
 }
 
+.form__input-container-owner {
+  @media (min-width: @ds-width) {
+    display: flex;
+    gap: 78px;
+  }
+}
+
 .form__input-wrapper-owner:not(:last-of-type) {
   margin-bottom: 20px;
+
+  @media (min-width: @ds-width) {
+    margin: 0;
+  }
 }
 
 .form__label-owner {
@@ -224,6 +259,22 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   position: relative;
   padding-left: 15px;
   padding-right: 50px;
+
+  @media (min-width: @ds-width) {
+    padding: 11px 50px 11px 20px;
+  }
+}
+
+.form__input-email {
+  @media (min-width: @ds-width) {
+    width: 486px;
+  }
+}
+
+.form__input-tel {
+  @media (min-width: @ds-width) {
+    width: 467px;
+  }
 }
 
 .form__input-owner:focus + .form__input-icon {
@@ -238,9 +289,19 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   position: absolute;
   right: 16px;
   stroke: @main-title-color;
+
+  &--email {
+    @media (min-width: @ds-width) {
+      left: 533px;
+    }
+  }
 }
 
 // Комментарий
+
+.form__group-comment {
+  grid-column: 1 / -1;
+}
 
 .form__legend-comment {
   max-width: 132px;
@@ -267,6 +328,11 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 }
 
 // Дополнительно
+
+.form__group-add {
+  grid-column: 1 / -1;
+}
+
 .form__legend-add {
   max-width: 167px;
   margin: 23px 0 34px;
@@ -283,6 +349,13 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
     margin-right: 103px;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 123px;
+  }
+
+  @media (min-width: @ds-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    margin-right: 95px;
   }
 }
 
@@ -325,6 +398,12 @@ input[type="checkbox"]:checked + .form__control-mark-checkbox::before {
     align-items: center;
     margin: 54px 115px 0 0;
   }
+
+  @media (min-width: @ds-width) {
+    grid-column: 1 / -1;
+    gap: 84px;
+    margin: 61px 350px 0 0;
+  }
 }
 
 .form__btn {
@@ -341,6 +420,10 @@ input[type="checkbox"]:checked + .form__control-mark-checkbox::before {
     padding: 13px 45px;
     font-size: @font-size-1;
     line-height: @font-line-height-3;
+  }
+
+  @media (min-width: @ds-width) {
+    width: calc(100vw - 872px);
   }
 }
 

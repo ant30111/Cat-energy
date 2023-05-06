@@ -37,13 +37,13 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--form">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item  main-nav__item--form">
               <a href="#">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item main-nav__item--form main-nav__item--current">
               <a>Подбор программы</a>
             </li>
           </ul>
@@ -106,43 +106,45 @@
           </fieldset>
 
           <!-- Владелец кота -->
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group-owner">
             <div class="form__legend-wrapper">
-              <legend class="form__legend form__legend-owner">Контактные данные
-              (владельца кота)</legend>
+              <h2 class="form__legend form__legend-owner">Контактные данные
+              (владельца кота)</h2>
             </div>
-            <div class="form__input-wrapper form__input-wrapper-owner">
-              <label class="form__label form__label-owner" for="form-email">E-mail:*</label>
-              <input class="form__input form__input-owner" type="email" id="form-email" placeholder="kuklachev@gmail.com" name="email">
-              <svg class="form__input-icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="form__input-wrapper form__input-wrapper-owner">
-              <label class="form__label form__label-owner" for="form-tel">Телефон:*</label>
-              <input class="form__input form__input-owner" type="tel" id="form-tel" placeholder="8 (960) 900-60-90" name="tel">
-              <svg class="form__input-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+            <div class="form__input-container-owner">
+              <div class="form__input-wrapper form__input-wrapper-owner">
+                <label class="form__label form__label-owner" for="form-email">E-mail:*</label>
+                <input class="form__input form__input-owner form__input-email" type="email" id="form-email" placeholder="kuklachev@gmail.com" name="email">
+                <svg class="form__input-icon form__input-icon--email" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="form__input-wrapper form__input-wrapper-owner">
+                <label class="form__label form__label-owner" for="form-tel">Телефон:*</label>
+                <input class="form__input form__input-owner form__input-tel" type="tel" id="form-tel" placeholder="8 (960) 900-60-90" name="tel">
+                <svg class="form__input-icon form__input-icon--tel" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
             </div>
           </fieldset>
 
           <!-- Комментарий -->
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group-comment">
             <div class="form__legend-wrapper">
-              <legend class="form__legend form__legend-comment">Комментарий</legend>
+              <h2 class="form__legend form__legend-comment">Комментарий</h2>
             </div>
             <label class="visually-hidden">Текстовое поле ввода</label>
             <textarea class="form__input form__input-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <!-- Дополнительно -->
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group-add">
             <div class="form__legend-wrapper">
-              <legend class="form__legend form__legend-add">Дополнительно</legend>
+              <h2 class="form__legend form__legend-add">Дополнительно</h2>
             </div>
             <ul class="form__checkbox-list">
               <li class="form__checkbox-item">

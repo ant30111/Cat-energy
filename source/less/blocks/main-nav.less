@@ -192,6 +192,10 @@
   }
 }
 
+.main-nav__item--form a {
+  color: #111111;
+}
+
 .main-nav__item:first-child a {
   &::before {
     position: absolute;
@@ -236,6 +240,15 @@
     &::after {
       bottom: -8px;
       background-color: @main-btn-color;
+    }
+  }
+}
+
+.main-nav__item--current.main-nav__item--form {
+  @media (min-width: @ds-width) {
+    &::after {
+      bottom: -8px;
+      background-color: @bg-main-color;
     }
   }
 }
