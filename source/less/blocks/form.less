@@ -23,7 +23,11 @@
   align-items: center;
 
   &:not(:last-of-type) {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
+
+    @media (min-width: @tab-width) {
+      margin-bottom: 23px;
+    }
 
     @media (min-width: @ds-width) {
       margin-bottom: 20px;
@@ -38,9 +42,10 @@
 }
 
 .form__label {
-  margin-right: 13px;
+  margin-right: 16px;
   text-transform: uppercase;
   white-space: nowrap;
+  font-size: @main-text-size-2;
   color: @main-text-color;
 
   @media (min-width: @tab-width) {
@@ -53,11 +58,16 @@
   .input();
   width: 100%;
   padding: 14px 20px 13px;
+  font-size: @main-text-size-2;
 
   @media (min-width: @tab-width) {
-    padding: 11px 20px;
+    padding: 9px 20px;
     font-size: @font-size-1;
     line-height: @font-line-height-3;
+  }
+
+  @media (min-width: @ds-width) {
+    padding: 11px 17px;
   }
 }
 
@@ -65,11 +75,11 @@
 
 .form__group-radio {
   position: relative;
-  padding: 22px 0 19px;
+  padding: 30px 0 12px;
 
   @media (min-width: @tab-width) {
-    margin: 72px auto 0;
-    padding: 25px 28px;
+    margin: 76px auto 0;
+    padding: 29px 28px 20px;
     border: 1px solid @decor-4;
   }
 
@@ -186,7 +196,9 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 // Владелец кота
 
 .form__group-owner {
-  grid-column: 1 / -1;
+  @media (min-width: @ds-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .form__legend-wrapper {
@@ -196,7 +208,7 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   &::before {
     position: absolute;
     z-index: -1;
-    top: 55%;
+    top: 31%;
     width: calc(100vw - 20px);
     height: 2px;
     background-color: @bg-main-color;
@@ -204,6 +216,7 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 
     @media (min-width: @tab-width) {
       width: 100vw;
+      top: 60%;
       left: -69px;
       background: linear-gradient(to right, @bg-main-color 4%, @main-btn-color 4%, @main-btn-color 9%, @bg-main-color 9%);
     }
@@ -232,7 +245,12 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 
   @media (min-width: @tab-width) {
     max-width: 554px;
-    margin: 71px 0 76px;
+    margin: 74px 0 76px;
+  }
+
+  @media (min-width: @ds-width) {
+    max-width: 551px;
+    margin-top: 68px;
   }
 }
 
@@ -244,7 +262,11 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 }
 
 .form__input-wrapper-owner:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+
+  @media (min-width: @tab-width) {
+    margin-bottom: 26px;
+  }
 
   @media (min-width: @ds-width) {
     margin: 0;
@@ -252,12 +274,16 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 }
 
 .form__label-owner {
-  margin-right: 20px;
+  margin-right: 11px;
+
+  @media (min-width: @tab-width) {
+    margin-right: 23px;
+  }
 }
 
 .form__input-owner {
   position: relative;
-  padding-left: 15px;
+  padding-left: 18px;
   padding-right: 50px;
 
   @media (min-width: @ds-width) {
@@ -274,6 +300,7 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 .form__input-tel {
   @media (min-width: @ds-width) {
     width: 467px;
+    padding-left: 17px;
   }
 }
 
@@ -290,6 +317,10 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   right: 16px;
   stroke: @main-title-color;
 
+  @media (min-width: @tab-width) {
+    right: 18px;
+  }
+
   &--email {
     @media (min-width: @ds-width) {
       left: 533px;
@@ -300,28 +331,38 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 // Комментарий
 
 .form__group-comment {
-  grid-column: 1 / -1;
+  @media (min-width: @ds-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.form__legend-wrapper-comment::before {
+  top: 56%;
+
+  @media (min-width: @tab-width) {
+    top: 66%;
+  }
 }
 
 .form__legend-comment {
-  max-width: 132px;
+  max-width: 144px;
   margin-bottom: 38px;
 
   @media (min-width: @tab-width) {
     max-width: 220px;
-    margin: 65px 0 76px;
+    margin: 65px 0 79px;
   }
 }
 
 .form__input-comment {
   height: 150px;
-  padding: 15px 9px 12px 9px;
+  padding: 10px 9px 12px 15px;
   font: inherit;
   font-size: @main-text-size-2;
 
   @media (min-width: @tab-width) {
     height: 174px;
-    padding: 10px 19px;
+    padding: 9px 19px;
     font-size: @font-size-1;
     line-height: @font-line-height-3;
   }
@@ -330,31 +371,46 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
 // Дополнительно
 
 .form__group-add {
-  grid-column: 1 / -1;
+  @media (min-width: @ds-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.form__legend-wrapper-add::before {
+  top: 57%;
+
+  @media (min-width: @tab-width) {
+    top: 62%;
+  }
 }
 
 .form__legend-add {
-  max-width: 167px;
-  margin: 23px 0 34px;
+  max-width: 165px;
+  margin: 20px 0 40px;
 
   @media (min-width: @tab-width) {
     max-width: 252px;
-    margin: 65px 0 57px;
+    margin: 58px 0 62px;
+  }
+
+  @media (min-width: @ds-width) {
+    margin-bottom: 65px;
   }
 }
 
 .form__checkbox-list {
   @media (min-width: @tab-width) {
     display: grid;
-    margin-right: 103px;
+    margin-right: 99px;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 123px;
   }
 
   @media (min-width: @ds-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0;
+    gap: 10px 0;
     margin-right: 95px;
   }
 }
@@ -369,6 +425,24 @@ input[type="radio"]:checked + .form__control-mark-radio::before {
   &:not(:last-of-type) {
     @media (max-width: 768px) {
       margin-bottom: 13px;
+    }
+  }
+
+  @media (min-width: @ds-width) {
+    &:first-child {
+      margin-right: -48px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 23px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4) {
+      margin-left: 80px;
     }
   }
 }
@@ -394,23 +468,23 @@ input[type="checkbox"]:checked + .form__control-mark-checkbox::before {
 .form__btn-wrapper {
   @media (min-width: @tab-width) {
     display: flex;
-    gap: 64px;
+    gap: 59px;
     align-items: center;
-    margin: 54px 115px 0 0;
+    margin: 48px 100px 0 0;
   }
 
   @media (min-width: @ds-width) {
     grid-column: 1 / -1;
     gap: 84px;
-    margin: 61px 350px 0 0;
+    margin: 54px 350px 0 0;
   }
 }
 
 .form__btn {
   .btn();
   width: 100%;
-  margin-top: 34px;
-  padding: 7px 44px;
+  margin-top: 27px;
+  padding: 9px 44px 10px;
   font-size: @main-text-size-2;
   line-height: @font-line-height-1;
 
@@ -428,7 +502,7 @@ input[type="checkbox"]:checked + .form__control-mark-checkbox::before {
 }
 
 .form__note {
-  margin-top: 21px;
+  margin-top: 15px;
   font-family: "Lato", "Arial", sans-serif;
   line-height: 16px;
   text-align: center;

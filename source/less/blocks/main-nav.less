@@ -245,9 +245,10 @@
 }
 
 .main-nav__item--current.main-nav__item--form {
-  @media (min-width: @ds-width) {
-    &::after {
-      bottom: -8px;
+  &::after {
+    bottom: -8px;
+
+    @media (min-width: @ds-width) {
       background-color: @bg-main-color;
     }
   }
