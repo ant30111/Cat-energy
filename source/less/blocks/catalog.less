@@ -5,6 +5,10 @@
   position: relative;
   margin: 0 20px;
 
+  @media (min-width: @tab-width) {
+    margin: 0 30px;
+  }
+
   &::before {
     @media (max-width: 768px) {
       position: absolute;
@@ -23,10 +27,23 @@
   font-weight: 400;
   font-size: @title-size-1;
   line-height: @title-line-height-1;
+
+  @media (min-width: @tab-width) {
+    margin-top: 65px;
+    font-size: @title-size-3;
+    line-height: @title-line-height-4;
+  }
 }
 
 .catalog__list {
   margin-top: 41px;
+
+  @media (min-width: @tab-width) {
+    display: grid;
+    grid-template-columns: calc(50vw - 60px) calc(50vw - 60px);
+    gap: 60px;
+    margin-top: 82px;
+  }
 }
 
 .catalog__product-card {
@@ -45,6 +62,11 @@
     }
   }
 
+  @media (min-width: @tab-width) {
+    padding: 0 38px 39px;
+    background: linear-gradient(to bottom, @main-btn-color 16%, @bg-text-color 16%);
+  }
+
   &:last-child::after {
     @media (max-width: 768px) {
       position: absolute;
@@ -56,11 +78,38 @@
       content: "";
     }
   }
+
+  &--more {
+    @media (min-width: @tab-width) {
+      height: calc(100% - 81px);
+      margin-top: 81px;
+      background: @main-btn-color;
+      outline: 2px solid @bg-text-color;
+    }
+  }
 }
 
 .catalog__product-link {
   display: flex;
   margin-left: 36px;
+
+  @media (min-width: @tab-width) {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 2px solid @main-title-color;
+    outline-offset: 6px;
+  }
 }
 
 .catalog__img {
@@ -68,10 +117,24 @@
 
   &--small {
     margin-right: 36px;
+
+    @media (min-width: @tab-width) {
+      margin: 36px auto 0;
+    }
+  }
+
+  &--fish-small {
+    @media (min-width: @tab-width) {
+      margin: 8px auto 0;
+    }
   }
 
   &--big {
     margin-right: 28px;
+
+    @media (min-width: @tab-width) {
+      margin: 8px auto 0;
+    }
   }
 }
 
@@ -87,6 +150,13 @@
   line-height: @font-line-height-1;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: @tab-width) {
+    margin: 34px auto 0;
+    font-size: @font-size-1;
+    line-height: @main-text-line-height-2;
+    text-align: center;
+  }
 }
 
 .catalog__discription-list {
@@ -95,11 +165,35 @@
   font-family: "Lato", "Arial", sans-serif;
   font-size: @font-size-3;
   line-height: @font-line-height-5;
+
+  @media (min-width: @tab-width) {
+    width: 100%;
+    margin-top: 21px;
+    font-size: @main-text-size-2;
+    color: @main-text-color;
+  }
 }
 
 .catalog__discription-wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tab-width) {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -9px;
+      width: 100%;
+      height: 1px;
+      background-color: @decor-2;
+      content: "";
+    }
+  }
 }
 
 .catalog__btn-order {
@@ -108,22 +202,9 @@
   padding: 10px;
   font-size: @main-text-size-2;
   line-height: @font-line-height-1;
-}
 
-.catalog__product-more {
-  position: relative;
-  padding-bottom: 25px;
-
-  &::after {
-    @media (max-width: 768px) {
-      position: absolute;
-      bottom: 0;
-      left: -20px;
-      width: 100vw;
-      height: 1px;
-      background-color: #d9d9d9;
-      content: "";
-    }
+  @media (min-width: @tab-width) {
+    margin-top: 42px;
   }
 }
 
@@ -141,15 +222,26 @@
   &::before {
     position: absolute;
     top: -39px;
-    left: 50%;
+    left: 44%;
     width: 30px;
-    height: 1px;
+    height: 2px;
     background-color: @decor-6;
     content: "";
+
+    @media (min-width: @tab-width) {
+      top: -79px;
+      width: 60px;
+    }
   }
 
   &::before {
     transform: rotate(90deg);
+  }
+
+  @media (min-width: @tab-width) {
+    margin-top: 161px;
+    font-size: @font-size-1;
+    line-height: @font-line-height-6;
   }
 }
 
@@ -160,6 +252,12 @@
   line-height: 16px;
   text-align: center;
   color: @main-text-color;
+
+  @media (min-width: @tab-width) {
+    margin-top: 23px;
+    font-size: @main-text-size-2;
+    line-height: @main-text-line-height-1;
+  }
 }
 
 .catalog__btn-more {
@@ -178,5 +276,9 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tab-width) {
+    margin-top: 87px;
   }
 }
