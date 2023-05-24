@@ -25,6 +25,20 @@
     background: url("../../img/catalog/mobile/catalog-cat-mob.png") no-repeat;
     background-size: cover;
   }
+
+  @media (min-width: @tab-width) {
+    min-height: 200px;
+    margin: 69px 30px 76px;
+
+    &::before,
+    &::after {
+      height: 200px;
+    }
+
+    &::after {
+      background: url("../../img/catalog/tablet-desktop/catalog-cat-tablet.png") no-repeat;
+    }
+  }
 }
 
 .gift__title {
@@ -38,4 +52,22 @@
   text-align: center;
   color: @main-btn-color;
   background: url("../../img/catalog/icon/catalog-gift.svg") no-repeat 50% 35%;
+
+  @media (min-width: @tab-width) {
+    width: calc(100vw - 608px);
+    margin: 0 0 0 422px;
+    padding-top: 71px;
+    text-align: left;
+    background: none;
+
+    &::before {
+      position: absolute;
+      top: 55px;
+      left: -343px;
+      width: 80px;
+      height: 82px;
+      background: url("../../img/catalog/icon/catalog-gift.svg") no-repeat;
+      content: "";
+    }
+  }
 }

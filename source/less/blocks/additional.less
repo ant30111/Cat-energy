@@ -4,6 +4,11 @@
 .additional {
   margin: 0 20px;
   padding-top: 25px;
+
+  @media (min-width: @tab-width) {
+    margin: 0 30px;
+    padding-top: 68px;
+  }
 }
 
 .additional__title-wrapper {
@@ -18,6 +23,12 @@
     height: 2px;
     background-color: @bg-main-color;
     content: "";
+
+    @media (min-width: @tab-width) {
+      width: 100vw;
+      left: -30px;
+      background: linear-gradient(to right, #68b738 4%, #ffffff 4%, #ffffff 9%, #68b738 9%);
+    }
   }
 }
 
@@ -28,28 +39,55 @@
   font-size: @title-size-2;
   line-height: @main-text-line-height-2;
   background-color: @main-btn-color;
+
+  @media (min-width: @tab-width) {
+    max-width: 374px;
+    margin: 0 0 80px 36px;
+    font-size: @title-size-1;
+    line-height: @title-line-height-1;
+  }
 }
 
 .additional__product-card {
   position: relative;
   padding: 13px 0 19px;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 1px;
-    background-color: @decor-2;
-    content: "";
+  @media (max-width: 768px) {
+    &::before {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: @decor-2;
+      content: "";
+    }
+
+    &:last-child::after {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: @decor-2;
+      content: "";
+    }
   }
 
-  &:last-child::after {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: @decor-2;
-    content: "";
+  @media (min-width: @tab-width) {
+    padding: 26px 38px 28px;
+    border-top: 1px solid @decor-2;
+    border-right: 1px solid @decor-2;
+    border-left: 1px solid @decor-2;
+
+    &:last-child {
+      border-bottom: 1px solid @decor-2;
+    }
+  }
+}
+
+.additional__product-content-wrapper {
+  @media (min-width: @tab-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -58,6 +96,11 @@
   line-height: @font-line-height-5;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: @tab-width) {
+    font-size: @font-size-1;
+    line-height: @font-line-height-1;
+  }
 }
 
 .additional__discription-list {
@@ -66,8 +109,16 @@
   flex-wrap: wrap;
   margin-top: 13px;
   font-family: "Lato", "Arial", sans-serif;
+  font-size: @main-text-size-1;
   line-height: @font-line-height-2;
   color: @main-text-color;
+
+  @media (min-width: @tab-width) {
+    column-gap: 50px;
+    margin: 0;
+    font-size: @main-text-size-2;
+    line-height: @font-line-height-1;
+  }
 }
 
 .additional__btn-order {
@@ -76,4 +127,9 @@
   padding: 10px 0;
   font-size: @main-text-size-2;
   line-height: @font-line-height-1;
+
+  @media (min-width: @tab-width) {
+    margin-top: 25px;
+    padding: 7px 0;
+  }
 }
