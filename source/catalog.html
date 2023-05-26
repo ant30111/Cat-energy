@@ -23,7 +23,7 @@
 
     <!-- Хедер -->
     <header class="main-header">
-      <a class="main-header__logo main-header__logo--form" href="index.html">
+      <a class="main-header__logo main-header__logo--form-catalog" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-ds.svg" width="202" height="59">
           <source media="(min-width: 769px)" srcset="img/logo-tab.svg" width="174" height="52">
@@ -37,13 +37,13 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--form-catalog">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item main-nav__item--current main-nav__item--form-catalog">
               <a href="#">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--form-catalog">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -184,7 +184,7 @@
                   alt="Питание рыба 1000г">
               </picture>
 							<div class="catalog__product-text-wrapper">
-								<h2 class="catalog__product-title">Cat Energy PRO<br class="line-break--tab-ds"> 1000 г</h2>
+								<h2 class="catalog__product-title catalog__product-title--fish-big">Cat Energy PRO<br class="line-break--tab-ds"> 1000 г</h2>
 								<dl class="catalog__discription-list">
 									<div class="catalog__discription-wrapper">
 										<dt>Масса</dt>
@@ -328,48 +328,57 @@
         <div class="additional__title-wrapper">
           <h2 class="additional__title">Дополнительные товары</h2>
         </div>
-        <ul>
-          <li class="additional__product-card">
-            <div class="additional__product-content-wrapper">
-              <h3 class="additional__product-card-title">Сахарозаменитель</h3>
-              <dl class="additional__discription-list">
-                <dt>1 упаковка (100 г)</dt>
-                <dd>200 ₽</dd>
-              </dl>
-            </div>
-            <a class="additional__btn-order" href="form.html">заказать</a>
-          </li>
-          <li class="additional__product-card">
-            <div class="additional__product-content-wrapper">
-              <h3 class="additional__product-card-title">питьевая вода</h3>
-              <dl class="additional__discription-list">
-                <dt>5 литров</dt>
-                <dd>50 ₽</dd>
-              </dl>
-            </div>
-            <a class="additional__btn-order" href="form.html">заказать</a>
-          </li>
-          <li class="additional__product-card">
-            <div class="additional__product-content-wrapper">
-              <h3 class="additional__product-card-title">молоко</h3>
-              <dl class="additional__discription-list">
-                <dt>1 литр</dt>
-                <dd>100 ₽</dd>
-              </dl>
-            </div>
-            <a class="additional__btn-order" href="form.html">заказать</a>
-          </li>
-          <li class="additional__product-card">
-            <div class="additional__product-content-wrapper">
-              <h3 class="additional__product-card-title">витамины</h3>
-              <dl class="additional__discription-list">
-                <dt>1 упаковка (30 г)</dt>
-                <dd>300 ₽</dd>
-              </dl>
-            </div>
-            <a class="additional__btn-order" href="form.html">заказать</a>
-          </li>
-        </ul>
+        <div class="additional__content-wrapper">
+          <ul class="additional__product-list">
+            <li class="additional__product-card">
+              <div class="additional__product-content-wrapper">
+                <h3 class="additional__product-card-title">Сахарозаменитель</h3>
+                <dl class="additional__discription-list">
+                  <dt>1 упаковка (100 г)</dt>
+                  <dd>200 ₽</dd>
+                </dl>
+              </div>
+              <a class="additional__btn-order" href="form.html">заказать</a>
+            </li>
+            <li class="additional__product-card">
+              <div class="additional__product-content-wrapper">
+                <h3 class="additional__product-card-title">питьевая вода</h3>
+                <dl class="additional__discription-list">
+                  <dt>5 литров</dt>
+                  <dd>50 ₽</dd>
+                </dl>
+              </div>
+              <a class="additional__btn-order" href="form.html">заказать</a>
+            </li>
+            <li class="additional__product-card">
+              <div class="additional__product-content-wrapper">
+                <h3 class="additional__product-card-title">молоко</h3>
+                <dl class="additional__discription-list">
+                  <dt>1 литр</dt>
+                  <dd>100 ₽</dd>
+                </dl>
+              </div>
+              <a class="additional__btn-order" href="form.html">заказать</a>
+            </li>
+            <li class="additional__product-card">
+              <div class="additional__product-content-wrapper">
+                <h3 class="additional__product-card-title">витамины</h3>
+                <dl class="additional__discription-list">
+                  <dt>1 упаковка (30 г)</dt>
+                  <dd>300 ₽</dd>
+                </dl>
+              </div>
+              <a class="additional__btn-order" href="form.html">заказать</a>
+            </li>
+          </ul>
+
+          <!-- Подарок десктоп -->
+          <div class="additional__gift">
+            <p class="additional__gift-title">Закажите все<br>
+            и получите чехол для
+            кота в подарок!</p>
+          </div>
+        </div>
       </section>
 
 
