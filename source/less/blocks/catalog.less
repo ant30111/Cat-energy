@@ -49,19 +49,23 @@
   @media (min-width: @tab-width) {
     display: grid;
     grid-template-columns: repeat(2, calc(50vw - 60px));
-    gap: 60px;
+    gap: 88px 60px;
     margin-top: 82px;
   }
 
   @media (min-width: @ds-width) {
     grid-template-columns: repeat(4, calc(100vw - 1195px));
-    gap: 62px 80px;
+    gap: 76px 80px;
   }
 }
 
 .catalog__product-card {
   position: relative;
   padding: 19px 0 25px;
+
+  &:last-child {
+    padding-top: 1px;
+  }
 
   &::before {
     @media (max-width: 768px) {
@@ -78,6 +82,24 @@
   @media (min-width: @tab-width) {
     padding: 0 38px 39px;
     background: linear-gradient(to bottom, @main-btn-color 16%, @bg-text-color 16%);
+
+    @media (min-width: @tab-width) and (max-width: 1439px) {
+      &--bg {
+        background: linear-gradient(to bottom, @main-btn-color 11%, @bg-text-color 11%);
+      }
+
+      &--rice {
+        background: linear-gradient(to bottom, @main-btn-color 11%, @bg-text-color 11%, @bg-text-color 95%, @main-btn-color 95%);
+      }
+    }
+  }
+
+  @media (min-width: @ds-width) {
+    padding: 0 40 px 36px;
+
+    &--bg-last {
+      background: linear-gradient(to bottom, @main-btn-color 12%, @bg-text-color 12%);
+    }
   }
 
   &:last-child::after {
@@ -95,9 +117,15 @@
   &--more {
     @media (min-width: @tab-width) {
       height: calc(100% - 81px);
-      margin-top: 81px;
+      margin-top: 55px;
+      padding-bottom: 61px;
       background: @main-btn-color;
       outline: 2px solid @bg-text-color;
+    }
+
+    @media (min-width: @ds-width) {
+      margin-top: 73px;
+      padding-bottom: 41px;
     }
   }
 }
@@ -105,6 +133,14 @@
 .catalog__product-link {
   display: flex;
   margin-left: 36px;
+
+  &--big {
+    margin-left: 28px;
+  }
+
+  &--buckwheat-big {
+    margin-left: 28px;
+  }
 
   @media (min-width: @tab-width) {
     margin-left: 0;
@@ -136,17 +172,7 @@
     }
 
     @media (min-width: @ds-width) {
-      margin: 25px auto 0;
-    }
-  }
-
-  &--fish-small {
-    @media (min-width: @tab-width) {
-      margin: 8px auto 0;
-    }
-
-    @media (min-width: @ds-width) {
-      margin: 25px auto 0;
+      margin: 31px auto 0;
     }
   }
 
@@ -159,6 +185,60 @@
 
     @media (min-width: @ds-width) {
       margin: 0 auto;
+    }
+  }
+
+  &--chicken-big {
+    @media (min-width: @ds-width) {
+      width: 174px;
+      height: 199px;
+      padding-right: 6px;
+    }
+  }
+
+  &--fish-small {
+    margin-top: 25px;
+
+    @media (min-width: @tab-width) {
+      margin: 8px auto 0;
+    }
+
+    @media (min-width: @ds-width) {
+      margin: 28px auto 0;
+    }
+  }
+
+  &--fish-big {
+    @media (min-width: @tab-width) {
+      margin-top: -16px;
+    }
+
+    @media (min-width: @ds-width) {
+      margin-top: 0;
+    }
+  }
+
+  &--buckwheat-small {
+    margin-top: 25px;
+
+    @media (min-width: @tab-width) {
+      margin-top: 12px;
+    }
+  }
+
+  &--buckwheat-big {
+    @media (min-width: @tab-width) {
+      margin-top: -16px;
+    }
+  }
+
+  &--rice {
+    margin-top: 24px;
+    margin-right: 32px;
+
+    @media (min-width: @tab-width) {
+      margin-top: 10px;
+      margin-right: 42px;
     }
   }
 }
@@ -181,21 +261,29 @@
     font-size: @font-size-1;
     line-height: @main-text-line-height-2;
     text-align: center;
+
+    &--chicken-big {
+      margin-top: 30px;
+    }
   }
 
   @media (min-width: @ds-width) {
-    margin-top: 46px;
+    margin-top: 44px;
     line-height: 21px;
 
+    &--chicken-small {
+      margin-top: 43px;
+    }
+
     &--fish-big {
-      margin-top: 70px;
+      margin-top: 47px;
     }
   }
 }
 
 .catalog__discription-list {
   width: calc(100vw - 180px);
-  margin-top: 18px;
+  margin-top: 15px;
   font-family: "Lato", "Arial", sans-serif;
   font-size: @font-size-3;
   line-height: @font-line-height-5;
@@ -205,6 +293,16 @@
     margin-top: 21px;
     font-size: @main-text-size-2;
     color: @main-text-color;
+  }
+
+  @media (min-width: @ds-width) {
+    &--chicken-small {
+      margin-top: 25px;
+    }
+
+    &--chicken-big {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -228,17 +326,54 @@
       content: "";
     }
   }
+
+  @media (min-width: @ds-width) {
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
 }
 
 .catalog__btn-order {
   .btn();
-  margin-top: 22px;
   padding: 10px;
   font-size: @main-text-size-2;
   line-height: @font-line-height-1;
 
+  &--chicken-small {
+    margin-top: 22px;
+  }
+
+  &--chicken-big {
+    margin-top: 10px;
+  }
+
+  &--fish-small {
+    margin-top: 22px;
+  }
+
+  &--fish-big {
+    margin-top: 12px;
+  }
+
+  &--buckwheat-small {
+    margin-top: 21px;
+  }
+
+  &--buckwheat-big {
+    margin-top: 12px;
+  }
+
+  &--rice {
+    margin-top: 16px;
+  }
+
   @media (min-width: @tab-width) {
     margin-top: 42px;
+  }
+
+  @media (min-width: @ds-width) {
+    margin-top: 45px;
   }
 }
 
@@ -264,7 +399,13 @@
 
     @media (min-width: @tab-width) {
       top: -79px;
+      left: 39%;
       width: 60px;
+    }
+
+    @media (min-width: @ds-width) {
+      top: -83px;
+      left: 33%;
     }
   }
 
@@ -276,6 +417,10 @@
     margin-top: 161px;
     font-size: @font-size-1;
     line-height: @font-line-height-6;
+  }
+
+  @media (min-width: @ds-width) {
+    margin-top: 151px;
   }
 }
 

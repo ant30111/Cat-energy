@@ -7,7 +7,7 @@
 
   @media (min-width: @tab-width) {
     margin: 0 30px;
-    padding-top: 68px;
+    padding-top: 45px;
   }
 
   @media (min-width: @ds-width) {
@@ -100,7 +100,7 @@
   }
 
   @media (min-width: @tab-width) {
-    padding: 26px 38px 28px;
+    padding: 26px 38px 33px;
     border-top: 1px solid @decor-2;
     border-right: 1px solid @decor-2;
     border-left: 1px solid @decor-2;
@@ -114,7 +114,7 @@
     display: flex;
     column-gap: calc(100vw - 1400px);
     align-items: center;
-    padding: 15px 0 17px;
+    padding: 14px 0 17px;
     border-top: 1px solid @decor-2;
     border-right: 0;
     border-left: 0;
@@ -188,6 +188,10 @@
 }
 
 .additional__gift {
+  @media (max-width: 1439px) {
+    display: none;
+  }
+
   @media (min-width: @ds-width) {
     position: relative;
     z-index: 1;
