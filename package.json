@@ -2,14 +2,16 @@
   "name": "cat-energy",
   "private": true,
   "description": "Личный проект «Cat Energy» от HTML Academy",
+  "homepage": "https://ant30111.github.io/Cat-energy/",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
     "browser-sync": "2.27.7",
     "del": "^7.0.0",
+    "gh-pages": "^5.0.0",
     "gulp": "4.0.2",
-    "gulp-less": "5.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "5.0.0",
     "gulp-libsquoosh": "^1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
@@ -22,6 +24,8 @@
     "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
