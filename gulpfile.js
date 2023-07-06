@@ -6,7 +6,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import squoosh from 'gulp-libsquoosh';
-import svgo from 'gulp-svgmin';
+import svgmin from 'gulp-svgmin';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import { deleteAsync } from 'del';
@@ -69,17 +69,18 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src('source/img/**/*.svg')
-  .pipe(svgo())
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg'])
+  .pipe(svgmin())
   .pipe(gulp.dest('build/img'));
 
 // Copy
 
-const copy = (done) => {
+export const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.webmanifest'
+    'source/*.webmanifest',
+    'source/img/sprite.svg'
   ], {
     base: 'source'
   })

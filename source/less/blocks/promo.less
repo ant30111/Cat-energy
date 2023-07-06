@@ -4,7 +4,7 @@
 .promo {
   position: relative;
   z-index: 1;
-  margin: 0 20px 20px;
+  margin: 0 30px 20px 20px;
 
   @media (min-width: @tab-width) {
     margin: 0 30px;
@@ -44,8 +44,18 @@
     background: url("../img/index/index-bg.png") no-repeat;
     background-size: cover;
 
+    @media (min-resolution: 1.5dppx) and (max-width: 1439px) {
+      background: url("../img/index/index-bg@2x.png") no-repeat;
+      background-size: cover;
+    }
+
     @media (min-width: @ds-width) {
       background: url("../img/index/index-bg-ds.png") no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-resolution: 1.5dppx) and (min-width: @ds-width) {
+      background: url("../img/index/index-bg-ds@2x.png") no-repeat;
       background-size: cover;
     }
   }

@@ -63,10 +63,6 @@
     font-size: @font-size-1;
     line-height: @font-line-height-4;
   }
-
-  @media (width: @mob-width) {
-    white-space: pre;
-  }
 }
 
 .footer__contacts-address {
@@ -91,12 +87,6 @@
   }
 }
 
-.footer__address-space {
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
 .footer__map-wrapper {
   height: 362px;
 
@@ -106,7 +96,7 @@
 }
 
 .footer__map {
-  width: 100vw;
+  width: 100%;
 
   @media (min-width: @tab-width) {
     display: block;
@@ -264,4 +254,8 @@
   @media (min-width: @tab-width) {
     margin-right: 27px;
   }
+}
+
+.footer__main-logo:hover .footer__main-logo-text {
+  color: @bg-main-color;
 }
